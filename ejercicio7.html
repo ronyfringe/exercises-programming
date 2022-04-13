@@ -1,0 +1,40 @@
+<!--Haz un script que escriba una pirámide inversa de los
+números del 1 al número que indique el usuario de la siguiente forma : (suponiendo que indica 30).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+        
+        //PEDIMOS EL NÚMERO POR TECLADO
+        var numrep = prompt("Introduce numero de repeticiones");
+        //SI LO INTRODUCIDO ES UN NÚMERO
+        if (Number(numrep) == numrep) {
+            //SI ES UN NÚMERO ENTRE 1 Y 50
+            if (numrep > 0 && numrep <= 50) {
+                var rep,i;
+                //BUCLE QUE VA DESDE numrep HASTA 1
+                for (i = numrep; i >= 1; i--) {
+                    //BUCLE DESDE i HASTA 1
+                    for (rep = i; rep >= 1; rep--) {
+                        document.write(i);
+                    }
+                    document.write("<br>");
+                }
+            } 
+            else {
+                alert("El número introducido no es válido");
+            }
+        } 
+        else {
+            alert("No has introducido un número");
+        }
+        </script>
+</body>
+</html>
+
