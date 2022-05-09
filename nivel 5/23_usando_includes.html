@@ -1,0 +1,30 @@
+<!--Realiza el mismo ejercicio anterior pero utilizando el método includes. 
+    Si no recuerdas como se usa aquí te dejo la chuleta. Métodos de la clase String JavaScript-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //DECLARACIÓN DEL ARRAY DE VOCALES
+        var vocales = ["a", "e", "i", "o", "u"];
+        var texto = prompt("Introduce un texto");
+        //PASAMOS EL TEXTO A MINÚSCULAS
+        var textomin = texto.toLowerCase();
+    //DECLARAMOS LA VARIABLE posicion DONDE GUARDAREMOS LA POSICIÓN DE LA VOCAL
+        var posicion = 0;
+        for (var i = 0; i < textomin.length; i++) {
+            if (vocales.includes(textomin.charAt(i))) {
+                posicion = i;
+                break;
+            }
+        }
+        document.write("<br>La primera vocal está en la posición " + posicion);
+    </script>
+</body>
+</html>
