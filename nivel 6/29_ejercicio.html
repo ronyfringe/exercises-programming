@@ -1,0 +1,29 @@
+<!--Crea una función que reciba un texto y lo devuelva al revés-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function voltear(texto){
+          var caracter = "";
+          var salida = "";
+          for(var i=0; i < texto.length; i++){
+            caracter = texto.charAt(i);
+            salida = caracter + salida;
+          }
+          return salida;
+        }
+       
+        var texto = prompt("Introduce un texto");
+        var reves = voltear(texto);
+        document.write("Texto original: " + texto + "<br>" +"<hr>");
+        document.write("Texto al revés: " + reves);
+      </script>
+</body>
+</html>

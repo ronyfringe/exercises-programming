@@ -1,0 +1,24 @@
+<!--Crea una función que genere número entero aleatorio entre min y max,
+     que serán pasados como parámetros. Por defecto min = 1 y max = 100-->
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+     </head>
+     <body>
+        <script>
+            function aleatorio(min,max){
+              var numero = Math.round((Math.random() * (max-min)) + min);
+              return numero;
+            }
+            var minimo = Number(prompt("Introduce el mínimo"));
+            var maximo = Number(prompt("Introduce el máximo"));
+            var resultado = aleatorio(minimo,maximo);
+            document.write(resultado);
+          </script>
+     </body>
+     </html>
