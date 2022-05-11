@@ -1,0 +1,202 @@
+<!--Realiza un script pida un mes y año e imprima su calendario. No hace falta esmerarse
+     en la presentación del calendario, el calendario simplificado puede ser del tipo:
+    OCTUBRE – 2014
+1 (miercoles), 2 (jueves), ….. , 31 (viernes).-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //PEDIMOS EL MES Y EL AÑO EN NÚMERO
+        var mes = Number(prompt("Introduce Mes (el número equivalente de dicho mes)"));
+        var ano = Number(prompt("Introduce Año"));
+        //RESTAMOS 1 AL MES PORQUE EN JAVASCRIPT VAN DE 0-11
+        mes = mes - 1;
+
+        //CREAMOS UN OBJETO FECHA CON LOS DATOS
+        var fecha = new Date(ano, mes);
+        var vardia = fecha.getDay();    //getDay() devuelve el dia de la semana.(0-6).
+
+        //CALCULAMOS EL NOMBRE DEL MES SEGÚN EL NÚMERO
+        switch (mes) {  //Algoritmo para saber el nombre del mes.
+            case 0:
+                mesletras = "Enero";
+                break;
+            case 1:
+                mesletras = "Febrero";
+                break;
+            case 2:
+                mesletras = "Marzo";
+                break;
+            case 3:
+                mesletras = "Abril";
+                break;
+            case 4:
+                mesletras = "Mayo";
+                break;
+            case 5:
+                mesletras = "Junio";
+                break;
+            case 6:
+                mesletras = "Julio";
+                break;
+            case 7:
+                mesletras = "Agosto";
+                break;
+            case 8:
+                mesletras = "Septiembre";
+                break;
+            case 9:
+                mesletras = "Octubre";
+                break;
+            case 10:
+                mesletras = "Noviembre";
+                break;
+            case 11:
+                mesletras = "Diciembre";
+                break;
+        }
+        //iMPRIMIMOS EL TÍTULO CON EL NOMBRE DEL MES Y EL AÑO
+        document.write("<h1>" + mesletras + " de " + ano + "</h1>");
+
+        //HACEMOS UN BUCLE QUE SE REPITA MIENTRAS EL MES NO CAMBIE
+        while (fecha.getMonth() == mes) {
+
+            //CALCULAMOS EL DIA DE LA SEMANA SEGÚN EL NÚMERO
+            switch (fecha.getDate()) { //Algoritmo para calcular el dia según el número.
+                case 0:
+                    dia = "Domingo";
+                    break;
+                case 1:
+                    dia = "Lunes";
+                    break;
+                case 2:
+                    dia = "Martes";
+                    break;
+                case 3:
+                    dia = "Miercoles";
+                    break;
+                case 4:
+                    dia = "Jueves";
+                    break;
+                case 5:
+                    dia = "Viernes";
+                    break;
+                case 6:
+                    dia = "Sabado";
+                    break;
+                case 7:
+                    dia = "Domingo";
+                    break;
+
+                case 8:
+                    dia = "Lunes";
+                    break;
+
+                case 9:
+                    dia = "Martes";
+                    break;
+
+                case 10:
+                    dia = "Miercoles";
+                    break;
+
+                case 11:
+                    dia = "Jueves";
+                    break;
+
+                case 12:
+                    dia = "Viernes";
+                    break;
+
+                case 13:
+                    dia = "Sabado";
+                    break;
+                case 14:
+                    dia = "Domingo";
+                    break;
+
+                case 15:
+                    dia = "Lunes";
+                    break;
+
+                case 16:
+                    dia = "Martes";
+                    break;
+
+                case 17:
+                    dia = "Miercoles";
+                    break;
+
+                case 18:
+                    dia = "jueves";
+                    break;
+
+                case 19:
+                    dia = "Viernes";
+                    break;
+                case 20:
+                    dia = "Sabado";
+                    break;
+
+                case 21:
+                    dia = "Domingo";
+                    break;
+
+                case 22:
+                    dia = "Lunes";
+                    break;
+
+                case 23:
+                    dia = "Martes";
+                    break;
+
+                case 24:
+                    dia = "Miercoles";
+                    break;
+
+                case 25:
+                    dia = "Jueves";
+                    break;
+
+                case 26:
+                    dia = "Viernes";
+                    break;
+                case 27:
+                    dia = "Sabado";
+                    break;
+
+                case 28:
+                    dia = "Domingo";
+                    break;
+
+                case 29:
+                    dia = "Lunes";
+                    break;
+
+                case 30:
+                    dia = "Martes";
+                    break;
+
+                case 31:
+                    dia = "Miercoles";
+                    break;                    
+                    
+            }
+            //IMPRIMIMOS EL DÍA Y EL DIA DE LA SEMANA
+            document.write(fecha.getDate() + "(" + dia + ")<br>");
+
+            //SUMAMOS 1 DÍA AL OBJETO FECHA
+            fecha.setDate(fecha.getDate() + 1);
+        }
+</script>
+</body>
+</html>
+
+
